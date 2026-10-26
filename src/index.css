@@ -1,284 +1,330 @@
 @import "tailwindcss";
 
+/* ===== БАЗОВЫЕ АНИМАЦИИ ===== */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgba(255, 165, 0, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 165, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
-  }
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 165, 0, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3); }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 @keyframes bounce-in {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 @keyframes wiggle {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-3deg);
-  }
-  75% {
-    transform: rotate(3deg);
-  }
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
 }
 
 @keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes paw-print {
-  0% {
-    opacity: 0;
-    transform: scale(0) rotate(-20deg);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2) rotate(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.8) rotate(10deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  14% {
-    transform: scale(1.3);
-  }
-  28% {
-    transform: scale(1);
-  }
-  42% {
-    transform: scale(1.3);
-  }
-  70% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
 }
 
-@keyframes slide-up-fade {
-  from {
-    opacity: 0;
-    transform: translateY(100px) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+@keyframes notification-in {
+  0% { opacity: 0; transform: translate(-50%, -20px) scale(0.8); }
+  50% { transform: translate(-50%, 5px) scale(1.05); }
+  100% { opacity: 1; transform: translate(-50%, 0) scale(1); }
 }
 
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(4);
-    opacity: 0;
-  }
+@keyframes modal-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes confetti {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200px) rotate(720deg);
-    opacity: 0;
-  }
+@keyframes modal-content-in {
+  0% { opacity: 0; transform: scale(0.7) translateY(40px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+@keyframes item-in {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
+/* ===== АНИМАЦИИ ВКЛАДОК ===== */
+
+/* Вкладка 1: Главная - Zoom + Fade */
+@keyframes tab-zoom {
+  0% { opacity: 0; transform: scale(0.85) translateY(30px); filter: blur(4px); }
+  60% { filter: blur(0px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0px); }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+/* Вкладка 2: Каталог - Stagger slide up */
+@keyframes tab-stagger {
+  0% { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in-down {
-  animation: fadeInDown 0.8s ease-out forwards;
+/* Вкладка 3: О породах - Flip */
+@keyframes tab-flip {
+  0% { opacity: 0; transform: perspective(800px) rotateY(-15deg) translateX(-40px); }
+  100% { opacity: 1; transform: perspective(800px) rotateY(0deg) translateX(0); }
 }
 
-.animate-fade-in-left {
-  animation: fadeInLeft 0.8s ease-out forwards;
+/* Вкладка 4: Как купить - Slide from right */
+@keyframes tab-slide-right {
+  0% { opacity: 0; transform: translateX(80px) scale(0.95); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
 }
 
-.animate-fade-in-right {
-  animation: fadeInRight 0.8s ease-out forwards;
+/* Вкладка 5: Отзывы - Fade + Blur */
+@keyframes tab-fade-blur {
+  0% { opacity: 0; transform: translateY(20px) scale(0.98); filter: blur(8px); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
 
-.animate-scale-in {
-  animation: scaleIn 0.6s ease-out forwards;
+/* Вкладка 6: Контакты - Bounce */
+@keyframes tab-bounce {
+  0% { opacity: 0; transform: scale(0.3) translateY(50px); }
+  50% { transform: scale(1.05) translateY(-10px); }
+  70% { transform: scale(0.95) translateY(5px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+/* Анимации элементов вкладок */
+@keyframes hero-content {
+  0% { opacity: 0; transform: translateY(50px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+@keyframes stat-in {
+  0% { opacity: 0; transform: translateY(20px) scale(0.5); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.animate-bounce-in {
-  animation: bounce-in 0.6s ease-out forwards;
+@keyframes advantage-in {
+  0% { opacity: 0; transform: translateY(40px) rotate(-5deg); }
+  100% { opacity: 1; transform: translateY(0) rotate(0deg); }
 }
 
-.animate-wiggle {
-  animation: wiggle 1s ease-in-out infinite;
+@keyframes catalog-header {
+  0% { opacity: 0; transform: translateY(-30px); letter-spacing: 0.5em; }
+  100% { opacity: 1; transform: translateY(0); letter-spacing: normal; }
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 4s ease infinite;
+@keyframes catalog-filters {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 8s linear infinite;
+@keyframes catalog-card {
+  0% { opacity: 0; transform: translateY(50px) rotateX(10deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
 }
 
-.animate-heartbeat {
-  animation: heartbeat 1.5s ease-in-out infinite;
+@keyframes breeds-header {
+  0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+  50% { transform: scale(1.1) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
-.animate-slide-up-fade {
-  animation: slide-up-fade 0.8s ease-out forwards;
+@keyframes breed-card {
+  0% { opacity: 0; transform: perspective(600px) rotateY(30deg) translateX(50px); }
+  100% { opacity: 1; transform: perspective(600px) rotateY(0deg) translateX(0); }
 }
 
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
+@keyframes buying-header {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes buying-step {
+  0% { opacity: 0; transform: translateX(60px) scale(0.9); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes buying-extra {
+  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes step-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(251, 146, 60, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(251, 146, 60, 0); }
+}
+
+@keyframes reviews-header {
+  0% { opacity: 0; transform: translateY(-20px); filter: blur(10px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes review-card {
+  0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes reviews-summary {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes contacts-header {
+  0% { opacity: 0; transform: translateY(-30px) rotateX(20deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
+}
+
+@keyframes contact-item {
+  0% { opacity: 0; transform: translateX(-40px) scale(0.9); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes contact-form {
+  0% { opacity: 0; transform: translateX(40px) scale(0.9); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes contacts-schedule {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes contacts-social {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes tab-icon-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4) rotate(10deg); }
+  100% { transform: scale(1); }
+}
+
+/* ===== КЛАССЫ АНИМАЦИЙ ===== */
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+.animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
+.animate-fade-in-left { animation: fadeInLeft 0.8s ease-out forwards; }
+.animate-fade-in-right { animation: fadeInRight 0.8s ease-out forwards; }
+.animate-scale-in { animation: scaleIn 0.6s ease-out forwards; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-bounce-in { animation: bounce-in 0.6s ease-out forwards; }
+.animate-wiggle { animation: wiggle 1s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+.animate-heartbeat { animation: heartbeat 1.5s ease-in-out infinite; }
+.animate-notification-in { animation: notification-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-modal-in { animation: modal-in 0.3s ease-out forwards; }
+.animate-modal-content-in { animation: modal-content-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-item-in { animation: item-in 0.4s ease-out forwards; opacity: 0; }
+.animate-hero-content { animation: hero-content 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-stat-in { animation: stat-in 0.6s ease-out forwards; opacity: 0; }
+.animate-advantage-in { animation: advantage-in 0.7s ease-out forwards; opacity: 0; }
+.animate-catalog-header { animation: catalog-header 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-catalog-filters { animation: catalog-filters 0.6s ease-out 0.3s forwards; opacity: 0; }
+.animate-catalog-card { animation: catalog-card 0.6s ease-out forwards; opacity: 0; }
+.animate-breeds-header { animation: breeds-header 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-breed-card { animation: breed-card 0.7s ease-out forwards; opacity: 0; }
+.animate-buying-header { animation: buying-header 0.6s ease-out forwards; }
+.animate-buying-step { animation: buying-step 0.6s ease-out forwards; opacity: 0; }
+.animate-buying-extra { animation: buying-extra 0.6s ease-out 1s forwards; opacity: 0; }
+.animate-step-pulse { animation: step-pulse 2s ease-in-out infinite; }
+.animate-reviews-header { animation: reviews-header 0.8s ease-out forwards; }
+.animate-review-card { animation: review-card 0.5s ease-out forwards; opacity: 0; }
+.animate-reviews-summary { animation: reviews-summary 0.8s ease-out 0.9s forwards; opacity: 0; }
+.animate-contacts-header { animation: contacts-header 0.7s ease-out forwards; }
+.animate-contact-item { animation: contact-item 0.5s ease-out forwards; opacity: 0; }
+.animate-contact-form { animation: contact-form 0.6s ease-out 0.4s forwards; opacity: 0; }
+.animate-contacts-schedule { animation: contacts-schedule 0.6s ease-out 0.6s forwards; opacity: 0; }
+.animate-contacts-social { animation: contacts-social 0.5s ease-out 0.8s forwards; opacity: 0; }
+.animate-tab-icon-pop { animation: tab-icon-pop 0.4s ease-out; }
+
+/* ===== ПЕРЕХОДЫ ВКЛАДОК ===== */
+.tab-hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.tab-visible {
+  opacity: 1;
+}
+
+.animate-tab-zoom.tab-visible {
+  animation: tab-zoom 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-tab-stagger.tab-visible {
+  animation: tab-stagger 0.5s ease-out forwards;
+}
+
+.animate-tab-flip.tab-visible {
+  animation: tab-flip 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-tab-slide-right.tab-visible {
+  animation: tab-slide-right 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-tab-fade-blur.tab-visible {
+  animation: tab-fade-blur 0.8s ease-out forwards;
+}
+
+.animate-tab-bounce.tab-visible {
+  animation: tab-bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ===== КАРТОЧКИ И ЭФФЕКТЫ ===== */
 .card-hover {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card-hover:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 .card-hover:hover .card-image {
@@ -287,6 +333,23 @@
 
 .card-image {
   transition: transform 0.5s ease;
+}
+
+.breed-card:hover .breed-card-image {
+  transform: scale(1.15) rotate(2deg);
+}
+
+.breed-card-image {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.breed-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.breed-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary {
@@ -317,21 +380,10 @@
   transform: scale(0.95);
 }
 
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
-.stagger-6 { animation-delay: 0.6s; }
-.stagger-7 { animation-delay: 0.7s; }
-.stagger-8 { animation-delay: 0.8s; }
-.stagger-9 { animation-delay: 0.9s; }
-.stagger-10 { animation-delay: 1.0s; }
-
 .glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 165, 0, 0.1);
 }
 
 .text-gradient {
@@ -341,10 +393,16 @@
   background-clip: text;
 }
 
-.bg-animated {
-  background: linear-gradient(-45deg, #ff9a56, #ffcd6b, #a8e6cf, #88d8f7);
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
+.status-available {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.status-unavailable {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.availability-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -356,65 +414,12 @@
   scrollbar-width: none;
 }
 
-.particle {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  animation: confetti 3s ease-out infinite;
-}
-
-.tooltip {
-  position: relative;
-}
-
-.tooltip::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-.tooltip:hover::before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-5px);
-}
-
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
-.hero-parallax {
-  transition: transform 0.1s ease-out;
-}
-
-.badge-pulse {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.availability-transition {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.status-available {
-  background: linear-gradient(135deg, #10b981, #059669);
-}
-
-.status-unavailable {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-}
-
-.status-limited {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+/* Плавный скролл */
+html {
+  scroll-behavior: smooth;
 }
